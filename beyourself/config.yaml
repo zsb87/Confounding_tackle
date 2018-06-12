@@ -1,0 +1,8 @@
+raw_folder:
+  '/Volumes/SHIBO/BeYourself/BeYourself-Structured/RAW'
+
+tmp_folder:
+  '/Volumes/SHIBO/BeYourself/BeYourself-Structured/TEMP'
+
+clean_folder:
+  '/Volumes/SHIBO/BeYourself/BeYourself-Structured/CLEAN'
