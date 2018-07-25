@@ -68,14 +68,14 @@ for act in focus_act:
     for SUBJ in SUBJS:
 
         folder = os.path.join(OUT_DIR, SUBJ, DEVICE, SENSOR, 'SAMPLE', 'FEATURE', 'All', act)
-        df = pd.read_csv(os.path.join(folder, act+'_groundtruthsegmentation.csv'))
+        df = pd.read_csv(os.path.join(folder, act+'_groundtruthsegmentation_all_features_lengthover1d8.csv'))
         df_concat.append(df)
     df = pd.concat(df_concat)
     print(len(df))
 
     folder = os.path.join(OUT_DIR, 'ALL', DEVICE, SENSOR, 'SAMPLE', 'FEATURE', 'All', act)
     create_folder(folder)
-    df.to_csv(os.path.join(folder, act+'_groundtruthsegmentation.csv'),index=None)
+    df.to_csv(os.path.join(folder, act+'_groundtruthsegmentation_all_features_lengthover1d8.csv'),index=None)
 
 
 

@@ -92,11 +92,12 @@ XY_all = posneg.as_matrix()
 
 fsc_list = []
 
-skf = StratifiedKFold(n_splits=10)
+skf = StratifiedKFold(n_splits=10, shuffle=True, random_state=1)
 
 first_flag = 1
 
 for XY_trn_idx, XY_test_idx in skf.split(XY_all[:,:-1], XY_all[:,-1]):
+    print(XY_trn_idx)
     XY_trn = XY_all[XY_trn_idx]
     XY_test = XY_all[XY_test_idx]
 

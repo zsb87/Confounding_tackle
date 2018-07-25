@@ -77,6 +77,6 @@ extension = ["FFTaccx0","FFTaccx1","FFTaccx2","FFTaccx3",\
 
 
 feature_names = genFeatsNames(feat_list, sensor_list, extension)
-# print(feature_names)
+print(len(feature_names))
 
 

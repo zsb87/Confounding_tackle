@@ -143,14 +143,14 @@ for SUBJ in SUBJS:
             SAMPLE_FEAT_FOLDER = os.path.join(OUT_DIR, SUBJ, DEVICE, SENSOR, 'SAMPLE', 'FEATURE', ACTIVITY)
 
             if os.path.exists(os.path.join(SAMPLE_FEAT_FOLDER, act)):
-                file = os.path.join(SAMPLE_FEAT_FOLDER, act, act+'_groundtruthsegmentation.csv')
+                file = os.path.join(SAMPLE_FEAT_FOLDER, act, act+'_groundtruthsegmentation_all_features_lengthover1d8.csv')
                 df = pd.read_csv(file, names=feature_names)
                 df_concat.append(df)
 
         df = pd.concat(df_concat)
         folder = os.path.join(os.path.join(OUT_DIR, SUBJ, DEVICE, SENSOR, 'SAMPLE', 'FEATURE', 'All', act))
         create_folder(folder)
-        df.to_csv(os.path.join(folder, act+'_groundtruthsegmentation.csv'),index=None)
+        df.to_csv(os.path.join(folder, act+'_groundtruthsegmentation_all_features_lengthover1d8.csv'),index=None)
 
 
 
